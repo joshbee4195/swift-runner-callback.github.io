@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swift Runner</title>
+</head>
+<body>
+
+<p>Returning to Swift Runner...</p>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+
+    if (code) {
+        window.location.href =
+            "swiftrunner://strava?code=" + encodeURIComponent(code);
+    }
+</script>
+
+</body>
+</html>
